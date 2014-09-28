@@ -6,7 +6,7 @@ use DBI;
 use XML::FeedPP;
 use Time::Local;
 
-my $base_url = 'http://perlstalker.vuser.org/Scriptures/';
+my $base_url = $ENV{BASE_URL} || 'http://perlstalker.vuser.org/Scriptures/';
 my $output_dir = '/usr/local/nginx/html/Scriptures';
 my $db_file = '/usr/local/share/scriptures.db';
 my $type = 'verse';
