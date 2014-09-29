@@ -7,7 +7,7 @@ use XML::FeedPP;
 use Time::Local;
 
 my $base_url = $ENV{BASE_URL} || 'http://perlstalker.vuser.org/Scriptures/';
-my $output_dir = '/usr/local/nginx/html/Scriptures';
+my $output_dir = $ENV{OUTPUT_DIR} || '/usr/local/nginx/html/Scriptures';
 my $db_file = '/usr/local/share/scriptures.db';
 my $type = 'verse';
 my $num_days = '365';
