@@ -8,7 +8,8 @@ RUN apt-get install -y perl cpanminus build-essential
 RUN apt-get install -y libdbi-perl libdbd-sqlite3-perl libxml-feedpp-perl libtime-local-perl
 
 ADD gen_scripture_feed.pl /usr/local/bin/
-ADD scriptures.db /usr/local/share/
+#ADD scriptures.db /usr/local/share/
+ADD https://github.com/PerlStalker/scripture-feed/raw/master/scriptures.db /usr/local/share/
 
 # To change the base url, uncomment this and make the necessary changes
 # or add `-e "BASE_URL=http://...` to `docker run`
